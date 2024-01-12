@@ -91,7 +91,7 @@ export default async function Home() {
       <div className="toast toast-end">
         <div className="alert bg-gray-950 text-white">
           <span className="countdown">
-            Live Visitors: <span className='ml-1' style={{ "--value": 84 }}></span>
+            Live Visitors: <span className='ml-1'>84</span>
           </span>
         </div>
       </div>
