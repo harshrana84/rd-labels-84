@@ -54,7 +54,9 @@ export default function ProductEditForm({ productId }: { productId: string }) {
   }
 
   if (error) return error.message
-  if (!product) return 'Loading...'
+  if (!product) {
+    return <span className="loading loading-ball loading-lg"></span>;
+  }
 
   const FormInput = ({
     id,

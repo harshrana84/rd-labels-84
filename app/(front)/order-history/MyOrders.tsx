@@ -18,7 +18,9 @@ export default function MyOrders() {
   if (!mounted) return <></>
 
   if (error) return 'An error has occurred.'
-  if (!orders) return 'Loading...'
+  if (!orders) {
+    return <span className="loading loading-ball loading-lg"></span>;
+  }
 
   return (
     <div className="overflow-x-auto">

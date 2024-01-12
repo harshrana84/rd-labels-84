@@ -30,7 +30,9 @@ export default function Users() {
     }
   )
   if (error) return 'An error has occurred.'
-  if (!users) return 'Loading...'
+  if (!users) {
+    return <span className="loading loading-ball loading-lg"></span>;
+  }
 
   return (
     <div>

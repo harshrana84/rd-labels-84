@@ -9,7 +9,10 @@ const Sidebar = () => {
   const { data: categories, error } = useSWR('/api/products/categories')
 
   if (error) return error.message
-  if (!categories) return 'Loading...'
+  if (!categories) {
+    return <span className="loading loading-ball loading-lg"></span>;
+  }
+
 
   return (
     <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">

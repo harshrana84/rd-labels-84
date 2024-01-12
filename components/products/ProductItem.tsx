@@ -20,7 +20,7 @@ export default function ProductItem({ product }: { product: Product }) {
       </figure>
       <div className="card-body">
         <Link href={`/product/${product.slug}`}>
-          <h2 className="card-title font-normal">{product.name}</h2>
+          <h2 className="card-title font-normal tracking-tight">{product.name}</h2>
         </Link>
         <Rating value={product.rating} caption={`(${product.numReviews})`} />
         <p className="mb-2">{product.brand}</p>

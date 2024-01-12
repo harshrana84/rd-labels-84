@@ -6,7 +6,9 @@ import useSWR from 'swr'
 export default function Orders() {
   const { data: orders, error } = useSWR(`/api/admin/orders`)
   if (error) return 'An error has occurred.'
-  if (!orders) return 'Loading...'
+  if (!orders) {
+    return <span className="loading loading-ball loading-lg"></span>;
+  }
 
   return (
     <div>

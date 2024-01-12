@@ -49,7 +49,10 @@ export default function UserEditForm({ userId }: { userId: string }) {
   }
 
   if (error) return error.message
-  if (!user) return 'Loading...'
+  if (!user) {
+    return <span className="loading loading-ball loading-lg"></span>;
+  }
+
 
   const FormInput = ({
     id,

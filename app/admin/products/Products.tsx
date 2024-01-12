@@ -51,7 +51,9 @@ export default function Products() {
   )
 
   if (error) return 'An error has occurred.'
-  if (!products) return 'Loading...'
+  if (!products) {
+    return <span className="loading loading-ball loading-lg"></span>;
+  }
 
   return (
     <div>

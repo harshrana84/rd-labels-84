@@ -10,7 +10,9 @@ export const SearchBox = () => {
   const { data: categories, error } = useSWR('/api/products/categories')
 
   if (error) return error.message
-  if (!categories) return 'Loading...'
+  if (!categories) {
+    return <progress className="progress w-56 progress-accent"></progress>;
+  }
 
   return (
     <form action="/search" method="GET">
