@@ -83,10 +83,10 @@ const Menu = () => {
             <>
               <li>
                 <div className="dropdown dropdown-bottom dropdown-end">
-                  <label tabIndex={0} className="btn btn-ghost rounded-btn" title={session.user.name}>
+                  <label tabIndex={0} className="btn btn-ghost rounded-btn" >
                     <div className="avatar online placeholder">
                       <div className="bg-neutral text-neutral-content rounded-full w-8">
-                        <span className="text-sm"> {session.user.name.slice(0, 2).toUpperCase()}</span>
+                        <span className="text-sm"> {session.user.name}</span>
                       </div>
                     </div>
                     <svg
